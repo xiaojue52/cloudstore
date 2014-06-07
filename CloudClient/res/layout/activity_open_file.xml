@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/open_file_div"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_login"
+    android:layout_height="match_parent" >
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/rebuy_vip_details"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"/>
+        
+    <Button
+        android:onClick="showPop"
+        android:id="@+id/open_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:layout_toRightOf="@id/rebuy_vip_details"
+        android:background="@drawable/login_button_selector"
+        android:text="购买VIP" />
+    <Button
+        android:id="@+id/button_openfile"
+        android:layout_width="match_parent"
+		android:layout_below="@id/open_buy"
+        android:layout_marginTop="20dp"
+        android:layout_height="48dip"
+        android:background="@drawable/login_button_selector"
+        android:text="选择文件" />
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/path"
+        android:layout_below="@id/button_openfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="文件路径"/>
+    <Button
+        android:onClick="submit"
+        android:layout_below="@id/path"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:text="提交"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/login_button_selector"/>
+</RelativeLayout>

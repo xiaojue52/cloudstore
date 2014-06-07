@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.project.po.User" table="c_user">
+	<id name="id" type="java.lang.Integer" column="id">
+   	<generator class="increment" />
+ 	 </id>
+  <property name="name" type="string" column="name" length="40"/>	
+  <property name="password" type="string" column="password" length="40"/>
+  <property name="vip" type="string" column="vip" length="40"/>
+ </class>
+</hibernate-mapping>

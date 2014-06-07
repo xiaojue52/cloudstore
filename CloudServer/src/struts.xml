@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="User" extends="struts-default" namespace="/">
+	    <action name="addUser" class="UserAction" method="addUserAction">
+	    </action>  
+	    <action name="getVip" class="UserAction" method="getVipAction">
+	    </action> 
+	    <action name="login" class="UserAction" method="loginAction">
+	    </action> 
+    </package>
+    <package name="CFile" extends="struts-default" namespace="/">
+	    <action name="addCFile" class="CFileAction" method="addCFileAction">
+	    </action>  
+	    <action name="listCFile" class="CFileAction" method="listCFilesAction">
+	          <result name="success">/filelist.jsp</result>
+	    </action>
+	    <action name="deleteCFile" class="CFileAction" method="deleteCFileAction">
+	          <result name="success" type="redirect">listCFile.action</result>
+	          <result name="error" type="redirect">listCFile.action?tag=1</result>
+	    </action>
+    </package>
+</struts>   

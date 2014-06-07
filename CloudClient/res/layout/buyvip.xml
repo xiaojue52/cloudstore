@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background_login"
+    android:layout_height="fill_parent">
+    <!-- padding 内边距   layout_margin 外边距
+  		android:layout_alignParentTop 布局的位置是否处于顶部 -->
+  		
+  	<RelativeLayout 
+  	    android:id="@+id/buyvip_div"
+  	    android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:padding="15dip"        
+	  	android:layout_margin="15dip" 
+	  	android:background="@drawable/background_login_div_bg" >
+  		<!-- 账号 -->
+	  	<TextView 
+	  		android:id="@+id/buyvip_details"
+	  		android:layout_width="match_parent"
+	  		android:layout_height="wrap_content"
+	  		android:layout_alignParentTop="true"
+	  		android:layout_marginTop="5dp"
+	  		android:text="VIP会员价格：100元/月"
+	  		android:textColor="#000000"
+	  		/>
+	  	<Spinner
+	  	    android:layout_marginTop="50dip"
+	  	    android:layout_below="@id/buyvip_details"
+            android:textSize="14sp"
+            android:id="@+id/spinner_vip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_login_div_bg" />
+	  	<Button 
+	        android:layout_marginTop="40dip"
+	        android:id="@+id/cancel_buyvip_btn"
+	    	android:layout_width="60dip"
+	    	android:layout_height="40dip"
+	    	android:layout_below="@id/spinner_vip"
+	    	android:layout_alignLeft="@id/buyvip_details"
+	    	android:text="取消"
+	    	android:background="@drawable/login_button_selector" />
+	    <Button 
+	        android:layout_marginTop="40dip"
+	        android:id="@+id/buyvip_btn"
+	    	android:layout_width="60dip"
+	    	android:layout_height="40dip"
+	    	android:layout_below="@id/spinner_vip"
+	    	android:layout_alignRight="@id/buyvip_details"
+	    	android:text="购买"
+	    	android:background="@drawable/login_button_selector" />
+  	</RelativeLayout>
+  
+</LinearLayout>
